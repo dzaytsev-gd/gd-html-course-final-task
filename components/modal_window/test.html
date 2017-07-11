@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Modal window component test</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		body {
+			margin: 0 auto;
+			width: 100%;
+			padding: 40px;
+			box-sizing: border-box;
+		}
+
+		.test-window .modal-container{
+			width: 600px;
+			min-height: 300px;
+		}
+
+		@media (max-width: 599px) {
+			.test-window .modal-container{
+				box-sizing: border-box;
+				width: calc(100vw - 40px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="modal test-window active">
+		<div class="modal-container">
+			<div class="title">Title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada felis vitae urna commodo, at tincidunt risus ullamcorper. Sed laoreet aliquam justo.</div>
+			<div class="content">Content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada felis vitae urna commodo, at tincidunt risus ullamcorper. Sed laoreet aliquam justo. Vivamus sodales sollicitudin dui ac elementum. Praesent vehicula, nisl non venenatis faucibus, lacus orci euismod arcu, nec posuere velit nisl ac nisi. Duis euismod venenatis bibendum. Sed euismod quam sit amet ligula efficitur tempor. Vivamus eu pretium augue. Fusce sit amet nisi pharetra enim malesuada viverra eget et nisl. Pellentesque fermentum velit libero, id varius purus finibus et. Pellentesque varius sodales nunc, non tincidunt leo consequat eget. Donec aliquet turpis nec nulla mattis, et fringilla eros lobortis.</div>
+		</div>
+	</div>
+	<main>
+		<section>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada felis vitae urna commodo, at tincidunt risus ullamcorper. Sed laoreet aliquam justo. Vivamus sodales sollicitudin dui ac elementum. Praesent vehicula, nisl non venenatis faucibus, lacus orci euismod arcu, nec posuere velit nisl ac nisi. Duis euismod venenatis bibendum. Sed euismod quam sit amet ligula efficitur tempor. Vivamus eu pretium augue. Fusce sit amet nisi pharetra enim malesuada viverra eget et nisl. Pellentesque fermentum velit libero, id varius purus finibus et. Pellentesque varius sodales nunc, non tincidunt leo consequat eget. Donec aliquet turpis nec nulla mattis, et fringilla eros lobortis.
+		</p>
+		<p>
+			Ut gravida condimentum ligula. Ut porttitor convallis felis, sit amet auctor enim tristique sit amet. Suspendisse euismod ante at mollis tempus. Aliquam mattis pretium nibh, ut scelerisque tellus cursus et. Vivamus non tellus felis. Morbi at consectetur lorem. Cras ultrices suscipit velit, sit amet sodales lorem. Etiam eget dolor tortor. Quisque tincidunt facilisis sapien et sollicitudin. Aenean velit nisi, sollicitudin convallis tristique nec, sollicitudin in tellus. Aenean ipsum arcu, ullamcorper vel dui sit amet, mattis tempus quam. Proin velit ligula, consectetur vitae metus sit amet, aliquam fringilla diam. Vestibulum hendrerit blandit egestas. Vivamus in viverra elit, quis eleifend massa.
+		</p>
+		<p>
+			Duis maximus leo vitae sagittis faucibus. Morbi a ante et metus rutrum lobortis. Praesent sit amet vulputate ante, in accumsan libero. Pellentesque blandit lacinia mi, vel tristique mi mattis posuere. Quisque et massa maximus, aliquam risus et, tincidunt justo. Donec ornare neque mauris, eget finibus libero mattis eu. Aenean porta feugiat aliquet.
+		</p>
+		<p>
+			Aliquam augue risus, accumsan venenatis tortor ac, volutpat hendrerit dui. Etiam cursus ipsum at dui vestibulum, sit amet tincidunt quam mollis. Curabitur tristique lorem eu odio fermentum maximus. Aenean sit amet rutrum ante, nec volutpat justo. Duis efficitur neque id dui posuere, vitae semper elit sagittis. Nullam volutpat pharetra elit, nec facilisis magna congue id. Praesent sit amet dolor ut diam lacinia rhoncus vitae ut lacus. Phasellus elementum nulla nec malesuada porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dolor nisl, congue in tortor quis, scelerisque porttitor augue. Vivamus sit amet orci facilisis, porta risus non, rhoncus turpis. Cras at ex tempus, interdum mauris vel, pharetra lacus. Aenean a iaculis lectus. In cursus nisl justo, gravida ultricies lacus vulputate vitae.
+		</p>
+		<p>
+			Integer luctus dui tellus, eu luctus diam blandit tincidunt. Morbi euismod eros ut ornare faucibus. Pellentesque porttitor, ex et sollicitudin maximus, leo nisl cursus felis, ut lacinia nulla arcu eget ligula. Nam luctus magna nec nulla molestie, a molestie ipsum auctor. Suspendisse ut quam at massa tristique eleifend. Sed ac lectus vel dui vestibulum vehicula. Cras rutrum commodo consectetur. Cras in turpis egestas, volutpat diam nec, varius metus. Aenean placerat odio ac convallis convallis. Cras ullamcorper scelerisque lorem a commodo. Praesent id iaculis justo. Nunc eleifend ac arcu sed posuere. Phasellus hendrerit ultricies dapibus. Nulla vestibulum nunc orci, vitae commodo lectus condimentum nec. Praesent convallis, elit et sagittis vehicula, dolor magna lobortis urna, vitae blandit justo sapien ut nulla. Fusce pretium a enim vel faucibus.
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada felis vitae urna commodo, at tincidunt risus ullamcorper. Sed laoreet aliquam justo. Vivamus sodales sollicitudin dui ac elementum. Praesent vehicula, nisl non venenatis faucibus, lacus orci euismod arcu, nec posuere velit nisl ac nisi. Duis euismod venenatis bibendum. Sed euismod quam sit amet ligula efficitur tempor. Vivamus eu pretium augue. Fusce sit amet nisi pharetra enim malesuada viverra eget et nisl. Pellentesque fermentum velit libero, id varius purus finibus et. Pellentesque varius sodales nunc, non tincidunt leo consequat eget. Donec aliquet turpis nec nulla mattis, et fringilla eros lobortis.
+		</p>
+		<p>
+			Ut gravida condimentum ligula. Ut porttitor convallis felis, sit amet auctor enim tristique sit amet. Suspendisse euismod ante at mollis tempus. Aliquam mattis pretium nibh, ut scelerisque tellus cursus et. Vivamus non tellus felis. Morbi at consectetur lorem. Cras ultrices suscipit velit, sit amet sodales lorem. Etiam eget dolor tortor. Quisque tincidunt facilisis sapien et sollicitudin. Aenean velit nisi, sollicitudin convallis tristique nec, sollicitudin in tellus. Aenean ipsum arcu, ullamcorper vel dui sit amet, mattis tempus quam. Proin velit ligula, consectetur vitae metus sit amet, aliquam fringilla diam. Vestibulum hendrerit blandit egestas. Vivamus in viverra elit, quis eleifend massa.
+		</p>
+		<p>
+			Duis maximus leo vitae sagittis faucibus. Morbi a ante et metus rutrum lobortis. Praesent sit amet vulputate ante, in accumsan libero. Pellentesque blandit lacinia mi, vel tristique mi mattis posuere. Quisque et massa maximus, aliquam risus et, tincidunt justo. Donec ornare neque mauris, eget finibus libero mattis eu. Aenean porta feugiat aliquet.
+		</p>
+		<p>
+			Aliquam augue risus, accumsan venenatis tortor ac, volutpat hendrerit dui. Etiam cursus ipsum at dui vestibulum, sit amet tincidunt quam mollis. Curabitur tristique lorem eu odio fermentum maximus. Aenean sit amet rutrum ante, nec volutpat justo. Duis efficitur neque id dui posuere, vitae semper elit sagittis. Nullam volutpat pharetra elit, nec facilisis magna congue id. Praesent sit amet dolor ut diam lacinia rhoncus vitae ut lacus. Phasellus elementum nulla nec malesuada porttitor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris dolor nisl, congue in tortor quis, scelerisque porttitor augue. Vivamus sit amet orci facilisis, porta risus non, rhoncus turpis. Cras at ex tempus, interdum mauris vel, pharetra lacus. Aenean a iaculis lectus. In cursus nisl justo, gravida ultricies lacus vulputate vitae.
+		</p>
+		<p>
+			Integer luctus dui tellus, eu luctus diam blandit tincidunt. Morbi euismod eros ut ornare faucibus. Pellentesque porttitor, ex et sollicitudin maximus, leo nisl cursus felis, ut lacinia nulla arcu eget ligula. Nam luctus magna nec nulla molestie, a molestie ipsum auctor. Suspendisse ut quam at massa tristique eleifend. Sed ac lectus vel dui vestibulum vehicula. Cras rutrum commodo consectetur. Cras in turpis egestas, volutpat diam nec, varius metus. Aenean placerat odio ac convallis convallis. Cras ullamcorper scelerisque lorem a commodo. Praesent id iaculis justo. Nunc eleifend ac arcu sed posuere. Phasellus hendrerit ultricies dapibus. Nulla vestibulum nunc orci, vitae commodo lectus condimentum nec. Praesent convallis, elit et sagittis vehicula, dolor magna lobortis urna, vitae blandit justo sapien ut nulla. Fusce pretium a enim vel faucibus.
+		</p>
+		</section>
+	</main>
+</body>
+</html>
