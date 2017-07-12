@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|PT+Sans:400,400i,700');
+
 :root {
 	background: #f3f3f3 url("../images/background.jpg") repeat;
 }
@@ -6,6 +8,7 @@ body {
 	margin: 0 auto;
 	min-width: 480px;
 	box-sizing: border-box;
+	font-family: 'PT Sans', sans-serif;
 }
 
 @media(min-width: 480px) {
@@ -42,7 +45,7 @@ header {
 	height: 40px;
 	line-height: 40px;
 	width: 100%;
-	padding:0 20px;
+	padding: 0 40px;
 	box-sizing: border-box;
 	background: #288575;
 	background: linear-gradient(to bottom, rgba(61,191,169,1) 0%,rgba(40,133,117,1) 92%,rgba(150,150,150,1) 93%,rgb(60, 190, 168) 100%);
@@ -97,17 +100,6 @@ header .auth .logout img {
 	margin-bottom: 4px;
 }
 
-footer:after {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	background: #288575;
-	height: 40px;
-	width: 100%;
-	z-index: -1;
-}
-
 footer {
 	box-sizing: border-box;
 	padding: 0 20px;
@@ -117,6 +109,7 @@ footer {
 	color: #fff;
 	font-size: 13px;
 	background: #288575;
+	box-shadow: 1000px 0px #288575, -1000px 0px #288575;
 }
 
 footer a {
@@ -126,7 +119,7 @@ footer a {
 main {
     min-height: calc(100vh - 80px);
     background-color: rgba(128, 128, 128, 0.46);
-    padding: 0 20px;
+    padding: 20px;
 }
 
 /* 
@@ -261,4 +254,53 @@ main {
 
 .btn.secondary {
 	background: linear-gradient(to top, rgb(180, 180, 180), rgb(125, 125, 125));
+}
+
+/* 
+	Catalog
+*/
+
+.catalog {
+	overflow: hidden;
+}
+
+.catalog .product {
+	display: inline-block;
+	width: 31%;
+	margin: 1% 1%;
+	padding: 0;
+	border: 0;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+	background: #ececec;
+	background: repeating-linear-gradient(135deg, #ececec,  #ececec 5px, #e4e4e4 8px);
+}
+
+@media(max-width: 999px) {
+	.catalog .product {
+		width: 47.5%;
+	}
+}
+
+.product .product-description {
+	padding: 0 20px 20px 20px;
+}
+
+.product .product-description h1 {
+	font-size: 18px;
+	padding-bottom: 2px;
+	border-bottom: 2px solid rgb(161, 228, 230);
+}
+
+.product .product-description p {
+	margin: 10px 0;
+}
+
+.product .product-image {
+	overflow: hidden;
+}
+
+.product .product-image img {
+	height: 100%;
+	width: 100%;
 }
