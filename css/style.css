@@ -81,12 +81,9 @@ header .auth {
 	padding: 0;
 }
 
-header .auth .greetings {
+header .auth li {
 	display: inline-block;
-}
-
-header .auth .logout {
-	display: inline-block;
+	margin-left: 10px;
 }
 
 header .auth .logout a {
@@ -132,7 +129,10 @@ main {
     padding: 0 20px;
 }
 
-/* Login window description */
+/* 
+	Login window description
+ */
+
 .login-window .modal-container {
 	width: 400px;
 	min-height: 200px;
@@ -210,7 +210,9 @@ main {
 	display: block;
 }
 
-/* Buttons */
+/* 
+	Buttons
+ */
 
 .btn {
 	display: inline-block;
