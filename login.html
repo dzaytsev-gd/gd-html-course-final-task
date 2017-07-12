@@ -13,19 +13,22 @@
 		<div class="modal-container">
 			<div class="title">Login to "Demo Shop"</div>
 			<div class="content">
-				<form action="#login">
-				<!-- http://fontawesome.io/icon/user/ link to person icon -->
+				<form onsubmit="return false;">
 					<label for="login">
 						Your Login:
-						<input type="text" name="login" placeholder=""
+						<input type="text" name="login" placeholder=" "
 								pattern="^[a-zA-Z0-9]{7,20}$" required="required" />
+						<i class="fa fa-user" aria-hidden="true"></i>
 					</label>
 					<label for="password">
 						Your Password:
-						<input type="text" name="password" placeholder=""
+						<input type="password" name="password" placeholder=" "
 								pattern="^[a-zA-Z0-9]{7,20}$" required="required" />
+						<i class="fa fa-lock" aria-hidden="true"></i>
 					</label>
-        			<button type="submit">Sign in</button>
+					<label for="submit">
+        				<button class="btn primary regular" type="submit">Submit</button>
+        			</label>
 				</form>
 			</div>
 		</div>

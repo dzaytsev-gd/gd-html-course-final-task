@@ -145,6 +145,18 @@ main {
 .login-window form label {
 	display: block;
 	margin-bottom: 20px;
+	position: relative;
+}
+
+.login-window form label:last-child {
+	margin-bottom: 0;
+}
+
+.login-window form label i {
+    position: absolute;
+	color: #d6d6d6;
+    top: 32px;
+    right: 12px;
 }
 
 .login-window form input {
@@ -155,15 +167,96 @@ main {
 	border-radius: 7px;
 	border: none;
 	padding-left: 13px;
+	padding-right: 30px;
 	box-sizing: border-box;
+	outline: none;
+}
+
+.login-window form input ~ i {
+	transition: color linear .1s;
 }
 
 .login-window form input:focus {
 	box-shadow: inset 0 0px 0px 2px rgb(175, 204, 198);
-	outline: none;
 }
 
-.login-window form input:invalid:focus {
+.login-window form input:invalid:not(:placeholder-shown) {
 	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+.login-window form input:invalid:focus:not(:placeholder-shown) {
+	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+.login-window form input:focus ~ i {
+	color: rgb(175, 204, 198);
+}
+
+.login-window form input:invalid:not(:placeholder-shown) ~ i {
+	color: rgb(228, 89, 89);
+}
+
+.login-window form input:invalid:focus:not(:placeholder-shown) ~ i {
+	color: rgb(228, 89, 89);
+}
+
+.login-window button {
+	float: right;
+}
+
+.login-window label:after {
+	content: "";
+	clear:both;
+	display: block;
+}
+
+/* Buttons */
+
+.btn {
+	display: inline-block;
+	font-family: arial;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	background: none;
+	border: none;
 	outline: none;
+	cursor: pointer;
+	opacity: 0.95;
+	padding: 0 40px;
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+.btn:disabled {
+	opacity: 0.5;
+}
+
+.btn.big {
+	height: 40px;
+}
+
+.btn.regular {
+	height: 30px;
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.btn.primary {
+	background: linear-gradient(to top, #398b73, #64ccbd);
+}
+
+.btn.primary:active {
+	background: linear-gradient(to top, #64ccbd, #398b73);
+}
+
+.btn.secondary {
+	background: linear-gradient(to top, rgb(125, 125, 125), rgb(180, 180, 180));
+}
+
+.btn.secondary {
+	background: linear-gradient(to top, rgb(180, 180, 180), rgb(125, 125, 125));
 }
