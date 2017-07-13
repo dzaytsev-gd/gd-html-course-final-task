@@ -45,7 +45,7 @@ header {
 	height: 40px;
 	line-height: 40px;
 	width: 100%;
-	padding: 0 40px;
+	padding: 0 30px;
 	box-sizing: border-box;
 	background: #288575;
 	background: linear-gradient(to bottom, rgba(61,191,169,1) 0%,rgba(40,133,117,1) 92%,rgba(150,150,150,1) 93%,rgb(60, 190, 168) 100%);
@@ -102,7 +102,7 @@ header .auth .logout img {
 
 footer {
 	box-sizing: border-box;
-	padding: 0 20px;
+	padding: 0 30px;
 	height: 40px;
 	line-height: 40px;
 	text-align: center;
@@ -209,7 +209,6 @@ main {
 
 .btn {
 	display: inline-block;
-	font-family: arial;
 	border-radius: 4px;
 	color: white;
 	font-weight: bold;
@@ -218,7 +217,7 @@ main {
 	outline: none;
 	cursor: pointer;
 	opacity: 0.95;
-	padding: 0 40px;
+	padding: 0 20px;
 }
 
 .btn:hover {
@@ -261,13 +260,35 @@ main {
 */
 
 .catalog {
+	display: flex;
+	justify-content: space-between;
 	overflow: hidden;
+    flex-wrap: wrap;
+    align-content: stretch;
 }
 
-.catalog .product {
+.product-wrapper {
+	box-sizing: border-box;
+	padding: 10px;
+	flex-basis: 33.3333%;
+}
+
+@media(max-width: 999px) {
+	.product-wrapper {
+		flex-basis: 50%;
+	}
+}
+
+@media(max-width: 479px) {
+	.product-wrapper {
+		flex-basis: 100%;
+	}
+}
+
+.product-card {
+	position: relative;
 	display: inline-block;
-	width: 31%;
-	margin: 1% 1%;
+	height: 100%;
 	padding: 0;
 	border: 0;
 	font-family: 'PT Sans', sans-serif;
@@ -276,31 +297,59 @@ main {
 	background: repeating-linear-gradient(135deg, #ececec,  #ececec 5px, #e4e4e4 8px);
 }
 
-@media(max-width: 999px) {
-	.catalog .product {
-		width: 47.5%;
-	}
-}
-
-.product .product-description {
+.product-card .product-description {
 	padding: 0 20px 20px 20px;
 }
 
-.product .product-description h1 {
+.product-card .product-description h1 {
 	font-size: 18px;
 	padding-bottom: 2px;
 	border-bottom: 2px solid rgb(161, 228, 230);
 }
 
-.product .product-description p {
+.product-card .product-description p {
 	margin: 10px 0;
 }
 
-.product .product-image {
+.product-card .product-image {
 	overflow: hidden;
 }
 
-.product .product-image img {
+.product-card .product-image img {
 	height: 100%;
 	width: 100%;
+}
+
+.product-card:after {
+	content: " ";
+	display: block;
+	height: 40px;
+}
+
+.product-cost {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
+.product-cost:first-letter {
+	color: #58b59b;
+}
+
+.show-more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.product-rating {
+	position: relative;
+	top: -24px;
+	margin-bottom: -20px;
 }
