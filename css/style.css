@@ -138,59 +138,14 @@ main {
 .login-window form label {
 	display: block;
 	margin-bottom: 20px;
-	position: relative;
 }
 
 .login-window form label:last-child {
 	margin-bottom: 0;
 }
 
-.login-window form label i {
-    position: absolute;
-	color: #d6d6d6;
-    top: 32px;
-    right: 12px;
-}
-
-.login-window form input {
-	transition: box-shadow linear .1s;
-	margin-top: 6px;
+.login-window input {
 	width: 100%;
-	height: 35px;
-	border-radius: 7px;
-	border: none;
-	padding-left: 13px;
-	padding-right: 30px;
-	box-sizing: border-box;
-	outline: none;
-}
-
-.login-window form input ~ i {
-	transition: color linear .1s;
-}
-
-.login-window form input:focus {
-	box-shadow: inset 0 0px 0px 2px rgb(175, 204, 198);
-}
-
-.login-window form input:invalid:not(:placeholder-shown) {
-	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
-}
-
-.login-window form input:invalid:focus:not(:placeholder-shown) {
-	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
-}
-
-.login-window form input:focus ~ i {
-	color: rgb(175, 204, 198);
-}
-
-.login-window form input:invalid:not(:placeholder-shown) ~ i {
-	color: rgb(228, 89, 89);
-}
-
-.login-window form input:invalid:focus:not(:placeholder-shown) ~ i {
-	color: rgb(228, 89, 89);
 }
 
 .login-window button {
@@ -204,13 +159,66 @@ main {
 }
 
 /* 
-	Buttons
+	Controls
  */
+
+
+input + i {
+    position: absolute;
+    color: #d6d6d6;
+    top: 0;
+    right: 10px;
+}
+
+.icon-input {
+	position: relative;
+}
+
+input {
+	transition: box-shadow linear .1s;
+	height: 35px;
+	border-radius: 7px;
+	border: none;
+	padding-left: 13px;
+	padding-right: 30px;
+	box-sizing: border-box;
+	outline: none;
+	font-size: 15px;
+	color: #333333;
+}
+
+input + i {
+	transition: color linear .1s;
+}
+
+input:focus {
+	box-shadow: inset 0 0px 0px 2px rgb(175, 204, 198);
+}
+
+input:invalid:not(:placeholder-shown) {
+	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+input:invalid:focus:not(:placeholder-shown) {
+	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+input:focus ~ i {
+	color: rgb(175, 204, 198);
+}
+
+input:invalid:not(:placeholder-shown) + i {
+	color: rgb(228, 89, 89);
+}
+
+input:invalid:focus:not(:placeholder-shown) + i {
+	color: rgb(228, 89, 89);
+}
 
 .btn {
 	display: inline-block;
 	border-radius: 4px;
-	color: white;
+	color: #fff;
 	font-weight: bold;
 	background: none;
 	border: none;
@@ -218,6 +226,7 @@ main {
 	cursor: pointer;
 	opacity: 0.95;
 	padding: 0 20px;
+    user-select: none;
 }
 
 .btn:hover {
@@ -228,30 +237,156 @@ main {
 	opacity: 0.5;
 }
 
-.btn.big {
-	height: 40px;
+.toggle-btn {
+	display: inline-block;
+	background: none;
+	border: none;
+	outline: none;
+	vertical-align: top;
 }
 
-.btn.regular {
+.toggle-btn > label {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 4px;
+	color: #fff;
+	opacity: 0.95;
+	user-select: none;
+}
+
+.toggle-btn > label:hover {
+	opacity: 1;
+}
+
+.toggle-btn > input[type="checkbox"] {
+	display: none;
+}
+
+.toggle-pannel {
+	display: none;
+}
+
+.toggle-btn > input[type="checkbox"]:checked ~ .toggle-pannel {
+	display: block;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(47, 137, 122);
+	border: 1px solid rgb(47, 137, 122);
+	-webkit-transition: .1s;
+	transition: .1s;
+	color: rgb(47, 137, 122);
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 21px;
+	left: 1px;
+	bottom: 1px;
+	background-color: white;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+
+input:checked + .slider {
+	background-color: #ffffff;
+	color: rgb(0, 0, 45);
+}
+
+input:checked + .slider:before {
+	background-color: rgb(47, 137, 122);
+	-webkit-transform: translateX(25px);
+	-ms-transform: translateX(25px);
+	transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.radio > input[type="radio"] {
+	display: none;
+}
+
+.radio {
+	position: relative;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid rgb(47, 137, 122);
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.radio > input + span {
+	background: #ffffff;
+	width: 23px;
+	height: 23px;
+	margin: 1px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.radio > input:checked + span {
+	background: #2f897a;
+}
+
+.radio.labeled-radio > input:checked + span:after {
+	color: #2f897a;
+}
+
+.big {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
+	font-size: 14px;
+}
+
+.regular {
 	height: 30px;
 	font-weight: 100;
 	font-size: 12px;
 	line-height: 30px;
+	padding: 0 20px;
 }
 
-.btn.primary {
+.primary {
 	background: linear-gradient(to top, #398b73, #64ccbd);
 }
 
-.btn.primary:active {
+.primary:active, .toggle-btn > input:checked + label {
 	background: linear-gradient(to top, #64ccbd, #398b73);
 }
 
-.btn.secondary {
+.secondary {
 	background: linear-gradient(to top, rgb(125, 125, 125), rgb(180, 180, 180));
 }
 
-.btn.secondary {
+.secondary:active {
 	background: linear-gradient(to top, rgb(180, 180, 180), rgb(125, 125, 125));
 }
 
@@ -352,4 +487,114 @@ main {
 	position: relative;
 	top: -24px;
 	margin-bottom: -20px;
+}
+
+/* 
+	Filters
+ */
+
+.search::placeholder {
+	font-style: italic;
+	font-size: 13px;
+}
+
+.filters-wrapper {
+	width: 100%;
+	display: flex;
+	padding: 0 10px;
+	box-sizing: border-box;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+}
+
+.filters-wrapper::after {
+	content: "";
+	clear: both;
+}
+
+.filters-pannel {
+	width: 618px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-left: -285px;
+	padding: 10px;
+	background: #fff;
+	border-radius: 6px;
+	z-index: 10;
+}
+
+.filters-pannel:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 8px 10px 8px;
+	border-color: transparent transparent #ffffff transparent;
+	position: absolute;
+	top: -10px;
+	left: 337px;
+}
+
+.filters-pannel-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow: hidden;
+	align-content: stretch;
+}
+
+.filter-element {
+	font-size: 13px;
+	width: 33.33%;
+	/* outline: 1px solid grey; */
+	border-radius: 4px;
+}
+
+.filter-element-label {
+	margin-bottom: 5px;
+}
+
+.availability-switch:after {
+	content: "Available only";
+	position: relative;
+	right: -55px;
+	top: 5px;
+	width: 80px;
+	display: inline-block;
+}
+
+.radio-label:after {
+	position: relative;
+	right: -29px;
+	top: 6px;
+	width: 80px;
+	display: inline-block;
+}
+
+.man-radio {
+	margin-right: 27px;
+}
+
+.man-radio > span:after {
+	content: "Man";
+}
+
+.woman-radio {
+	margin-right: 44px;
+}
+
+.woman-radio > span:after {
+	content: "Woman";
+}
+
+.unisex-radio {
+	margin-right: 30px;
+}
+
+.unisex-radio > span:after {
+	content: "Unisex";
 }

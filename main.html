@@ -12,11 +12,56 @@
 	<header>
 		<a class="logo" href="#"><img src="images/logo.png" alt="Demo Shop"></a>
 		<ul class="auth">
-			<li class="greetings"><a href="#profile">Hello, <i>John_Doe</i></a></li>
-			<li class="logout" alter="logout"><a href="#logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a></li>
+			<li class="greetings" title="Profile page"><a href="#profile">Hello, <i>John_Doe</i></a></li>
+			<li class="logout" title="Logout"><a href="#logout"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></a></li>
 		</ul>
 	</header>
 	<main>
+		<div class="filters-wrapper">
+			<div class="filters">
+				<div class="toggle-btn">
+      				<input type="checkbox" id="show-filters" checked>
+      				<label for="show-filters" class="primary big">Filter options</label>
+      				<div class="toggle-pannel filters-pannel">
+      					<div class="filters-pannel-container">
+      						<div class="filter-element">
+								<div class="filter-element-label">Availability:</div>
+								<label class="switch">
+								  <input type="checkbox" checked>
+								  <span class="slider round availability-switch"></span>
+								</label>
+      						</div>
+      						<div class="filter-element">
+								<div class="filter-element-label">Gender:</div>
+								<label class="radio labeled-radio man-radio" for="gender-filter-man">
+								  <input type="radio" name="gender-filter" id="gender-filter-man">
+								  <span class="round radio-label"></span>
+								</label>
+								<label class="radio labeled-radio woman-radio" for="gender-filter-woman">
+								  <input type="radio" name="gender-filter" id="gender-filter-woman">
+								  <span class="round radio-label"></span>
+								</label>
+								<label class="radio labeled-radio unisex-radio" for="gender-filter-unisex">
+								  <input type="radio" name="gender-filter" id="gender-filter-unisex" checked>
+								  <span class="round radio-label"></span>
+								</label>
+      						</div>
+      						<div class="filter-element">
+								<div class="filter-element-label">Availability:</div>
+								<label class="switch">
+								  <input type="checkbox" checked>
+								  <span class="slider round availability-switch"></span>
+								</label>
+      						</div>
+      					</div>
+      				</div>
+    			</div>
+    			<span class="icon-input">
+					<input type="search" title="Search box" class="search" placeholder="Search by text...">
+					<i class="fa fa-search" aria-hidden="true"></i>
+				<span>
+			</div>
+		</div>
 		<div class="catalog">
 			<div class="product-wrapper">
 				<div class="product-card">
