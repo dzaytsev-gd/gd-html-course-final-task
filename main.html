@@ -5,8 +5,10 @@
 	<title>Demo Shop 2017</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/jquery-ui-slider/jquery-ui.min.css">
 	<link rel="stylesheet" href="components/rating/style.css">
+	<link rel="stylesheet" href="components/range-slider/style.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -60,22 +62,17 @@
       						</div>
       						<div class="filter-element rating-filter">
 								<div class="filter-element-label">Rating:</div>
-								<label class="switch">
-								  <input type="checkbox" checked>
-								  <span class="slider round availability-switch"></span>
-								</label>
+								<div id="rating-slider">
+									<div id="rating-handle-1" class="ui-slider-handle" value="1"></div>
+									<div id="rating-handle-2" class="ui-slider-handle" value="3"></div>
+								</div>
       						</div>
       						<div class="filter-element price-filter">
 								<div class="filter-element-label">Price:</div>
-								<span class="icon-select">
-									<select>
-										<option>Active wear</option>
-										<option>Dresses</option>
-										<option>Jeans</option>
-										<option>Boats</option>
-									</select>
-									<i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
-								</select>
+								<div id="price-slider">
+									<div id="price-handle-1" class="ui-slider-handle" value="517"></div>
+									<div id="price-handle-2" class="ui-slider-handle" value="684"></div>
+								</div>
       						</div>
       					</div>
       				</div>
@@ -224,5 +221,8 @@
 	<footer>
 		Copyright <a href="#">"Demo Shop"</a>, 2017
 	</footer>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/jquery-ui-slider/jquery-ui.min.js"></script>
+	<script src="js/range-slider.js"></script>
 </body>
 </html>

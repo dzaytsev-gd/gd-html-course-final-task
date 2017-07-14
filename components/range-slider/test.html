@@ -25,10 +25,26 @@
 <body>
 	<main>
 		<div class="element-with-range-slider">
-			Slider
+			<p>
+			  <label>Price range:</label>
+			</p>
+			<div id="price-slider">
+				<div id="price-handle-1" class="ui-slider-handle" value="100"></div>
+				<div id="price-handle-2" class="ui-slider-handle" value="300"></div>
+			</div>
+		</div>
+		<div class="element-with-range-slider">
+			<p>
+			  <label>Rating range:</label>
+			</p>
+			<div id="rating-slider">
+				<div id="rating-handle-1" class="ui-slider-handle" value="1"></div>
+				<div id="rating-handle-2" class="ui-slider-handle" value="3"></div>
+			</div>
 		</div>
 	</main>
 	<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../../node_modules/jquery-ui-slider/jquery-ui.min.js"></script>
+	<script src="range-slider.js"></script>
 </body>
 </html>
