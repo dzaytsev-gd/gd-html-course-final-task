@@ -359,6 +359,32 @@ input:checked + .slider:before {
 	color: #2f897a;
 }
 
+.icon-select {
+	position: relative;
+}
+
+select {
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 30px;
+	background-color: #2f897a;
+	color: #fff;
+	text-align: center;
+	outline: none;
+	padding-left: 8px;
+	box-sizing: border-box;
+}
+
+.icon-select > select ~ i {
+	position: absolute;
+	color: #fff;
+	top: -4px;
+	right: 9px;
+	display: inline-block;
+}
+
 .big {
 	height: 35px;
 	line-height: 35px;
@@ -513,12 +539,12 @@ input:checked + .slider:before {
 }
 
 .filters-pannel {
-	width: 618px;
+	width: 620px;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
 	position: absolute;
 	box-sizing: border-box;
 	margin-top: 10px;
-	margin-left: -285px;
+	margin-left: -287px;
 	padding: 10px;
 	background: #fff;
 	border-radius: 6px;
@@ -545,14 +571,40 @@ input:checked + .slider:before {
 	flex-wrap: wrap;
 	overflow: hidden;
 	align-content: stretch;
+	flex-basis: 200px;
 }
 
 .filter-element {
-	font-size: 13px;
-	width: 33.33%;
-	/* outline: 1px solid grey; */
+	font-size: 12px;
+	/* width: 33.33%; */
+	min-width: 30%;
+	margin-bottom: 10px;
+	outline: 1px solid grey;
 	border-radius: 4px;
 }
+
+.availability-filter {
+	flex-grow: 1;
+}
+
+.gender-filter {
+	flex-grow: 1;
+}
+
+.category-filter {
+	flex-grow: 1;
+}
+
+
+.rating-filter {
+	flex-grow: 1;
+}
+
+
+.price-filter {
+	flex-grow: 2;
+}
+
 
 .filter-element-label {
 	margin-bottom: 5px;
@@ -569,9 +621,9 @@ input:checked + .slider:before {
 
 .radio-label:after {
 	position: relative;
-	right: -29px;
+	right: -28px;
 	top: 6px;
-	width: 80px;
+	width: 40px;
 	display: inline-block;
 }
 
