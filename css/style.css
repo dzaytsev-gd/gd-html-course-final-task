@@ -145,7 +145,7 @@ main {
 	margin-bottom: 0;
 }
 
-.login-window input {
+.login-window input, .login-window .icon-input {
 	width: 100%;
 }
 
@@ -176,13 +176,17 @@ input + i {
 	display: inline-block;
 }
 
+.icon-input input {
+	padding-right: 30px;
+}
+
 input {
 	transition: box-shadow linear .1s;
 	height: 35px;
 	border-radius: 7px;
 	border: none;
 	padding-left: 13px;
-	padding-right: 30px;
+	padding-right: 5px;
 	box-sizing: border-box;
 	outline: none;
 	font-size: 15px;
@@ -193,27 +197,27 @@ input + i {
 	transition: color linear .1s;
 }
 
-input:focus {
+input:focus, textarea:focus {
 	box-shadow: inset 0 0px 0px 2px rgb(175, 204, 198);
 }
 
-input:invalid:not(:placeholder-shown) {
+input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {
 	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
 }
 
-input:invalid:focus:not(:placeholder-shown) {
+input:invalid:focus:not(:placeholder-shown), textarea:invalid:focus:not(:placeholder-shown) {
 	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
 }
 
-input:focus ~ i {
+input:focus ~ i, textarea:focus ~ i {
 	color: rgb(175, 204, 198);
 }
 
-input:invalid:not(:placeholder-shown) + i {
+input:invalid:not(:placeholder-shown) + i, textarea:invalid:not(:placeholder-shown) + i {
 	color: rgb(228, 89, 89);
 }
 
-input:invalid:focus:not(:placeholder-shown) + i {
+input:invalid:focus:not(:placeholder-shown) + i, textarea:invalid:focus:not(:placeholder-shown) + i {
 	color: rgb(228, 89, 89);
 }
 
@@ -336,7 +340,7 @@ input:checked + .slider:before {
 }
 
 .radio {
-	position: relative;
+	position: static;
 	display: inline-block;
 	width: 25px;
 	height: 25px;
@@ -387,6 +391,18 @@ select {
 	top: -4px;
 	right: 9px;
 	display: inline-block;
+}
+
+textarea {
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	height: 150px;
+	overflow: auto;
+	outline: none;
+	transition: box-shadow linear .1s;
+	padding: 5px 0 0 7px;
+	box-sizing: border-box;
 }
 
 .big {
@@ -523,7 +539,7 @@ select {
 	Filters
  */
 
-.search::placeholder {
+*::placeholder {
 	font-style: italic;
 	font-size: 13px;
 }
@@ -843,8 +859,107 @@ select {
 	width: 100%;
 	height: 100%;
 }
+
 @media(max-width: 800px) {
 	.statistics .statistic-element {
 		flex-basis: 100%;
 	}
+}
+
+
+/*
+	Product admin
+*/
+
+.product-admin-pannel a {
+	color: #42917a;
+}
+
+.modal.purchased-successfully .modal-container, .modal.delete .modal-container {
+	display: inline-block;
+	width: 250px;
+}
+
+.modal.purchased-successfully .title, .modal.delete .title {
+	text-align: left;
+}
+
+.modal.purchased-successfully .content, .modal.delete .content {
+	overflow: auto;
+	text-align: center;
+	min-height: 80px;
+}
+
+.modal.delete .content br {
+	margin: 0;
+}
+
+.purchased-successfully .bottom-control-menu .btn {
+	display:inline-block;
+	float: right;
+}
+
+.modal.edit .modal-container{
+	width: 500px;
+}
+
+.modal.edit .first-column {
+	float:left;
+	width: calc(50% - 5px);
+}
+
+.modal.edit .second-column {
+	float:right;
+	width: calc(50% - 5px);
+}
+
+@media(max-width: 500px) {
+	.modal.edit .first-column {
+	float:none;
+	width: 100%;
+}
+
+.modal.edit .second-column {
+	float:none;
+	width: 100%;
+}
+}
+.modal.edit form {
+	overflow: hidden;
+}
+
+.modal.edit form label {
+	display: inline-block;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.modal.edit form label label {
+	width: auto;
+	margin-bottom: 0px;
+}
+
+.modal.edit form label:last-child {
+	margin-bottom: 0px;
+}
+
+.modal.edit form label input {
+	width: 100%;
+}
+
+.modal.edit form label select {
+	background: #fff;
+	border: none;
+	color: #444;
+	height: 35px;
+}
+
+.modal.edit form label .icon-select > select + i {
+	color: #2f897a;
+}
+
+.modal.edit .image-preview img {
+	width: 100%;
+	box-sizing: border-box;
+	border: 2px solid #fff;
 }
