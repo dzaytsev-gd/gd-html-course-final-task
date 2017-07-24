@@ -16,7 +16,7 @@
 				<div class="content">
 					You successfully purchased this item.
 					<div class="bottom-control-menu">
-						<button class="primary btn regular" onclick="toggleSuccessPurchasedWindow()">Continue shopping</button>
+						<button class="primary btn regular" id="buy-product-ok-button">Continue shopping</button>
 					</div>
 				</div>
 			</div>
@@ -97,7 +97,7 @@
 							</label>
 						</div>
 						<div class="bottom-control-menu">
-							<button class="secondary btn regular" onclick="toggleEditWindow()">Cancel</button><button class="primary btn regular" onclick="toggleEditWindow()">Submit</button>
+							<button class="secondary btn regular" id="edit-product-cancel-button">Cancel</button><button class="primary btn regular" id="edit-product-submit-button">Submit</button>
 						</div>
 					</form>
 				</div>
@@ -111,7 +111,7 @@
 					You are trying to delete this product.<br>
 					Are you sure you want this?
 					<div class="bottom-control-menu">
-						<button class="secondary btn regular" onclick="toggleDeleteWindow()">Cancel</button><button class="primary btn regular" onclick="toggleDeleteWindow()">Submit</button>
+						<button class="secondary btn regular" id="delete-product-cancel-button">Cancel</button><button class="primary btn regular" id="delete-product-submit-button">Submit</button>
 					</div>
 				</div>
 			</div>
@@ -149,14 +149,14 @@
 						Vestibulum consectetur tellus ac risus sollicitudin, id gravida ex vulputate. Maecenas quis cursus ex. Nunc feugiat sed sem eu pharetra. Aliquam erat volutpat. Ut eu quam dictum, pretium erat eu, viverra leo. Duis pellentesque pretium vulputate. Mauris auctor ipsum posuere mi convallis, at tempor ipsum blandit. Integer eu aliquam dolor. Mauris id rhoncus erat.
 					</p>
 					<div class="product-admin-pannel">
-							You can <a href="#add-more">add 5 more</a>. You can also <a href="#edit" onclick="toggleEditWindow()">edit</a> or <a href="#delete" onclick="toggleDeleteWindow()">delete</a> them.
+							You can <a href="#add-more">add 5 more</a>. You can also <a href="#edit" id="edit-product-button">edit</a> or <a href="#delete" id="delete-product-button">delete</a> them.
 					</div>
 				</div>
 				<div class="product-menu">
 					<span class="product-cost">
 						$47.95
 					</span>
-					<a class="buy btn primary regular" onclick="toggleSuccessPurchasedWindow()">Buy</a>
+					<a class="buy btn primary regular" id="buy-product-button">Buy</a>
 				</div>
 			</div>
 		</article>
