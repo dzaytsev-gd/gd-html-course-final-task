@@ -1,0 +1,31 @@
+.login-window .modal-container {
+	width: 400px;
+	min-height: 200px;
+}
+
+.login-window .modal-container .content {
+	padding: 25px;
+}
+
+.login-window form label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.login-window form label:last-child {
+	margin-bottom: 0;
+}
+
+.login-window input, .login-window .icon-input {
+	width: 100%;
+}
+
+.login-window button {
+	float: right;
+}
+
+.login-window label:after {
+	content: "";
+	clear:both;
+	display: block;
+}

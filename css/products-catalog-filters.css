@@ -1,0 +1,172 @@
+*::placeholder {
+	font-style: italic;
+	font-size: 13px;
+}
+
+.filters-wrapper {
+	width: 100%;
+	display: flex;
+	padding: 0 10px;
+	box-sizing: border-box;
+	justify-content: flex-end;
+	margin-bottom: 10px;
+}
+
+.filters-wrapper::after {
+	content: "";
+	clear: both;
+}
+
+.filters-pannel {
+	width: 620px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+	position: absolute;
+	box-sizing: border-box;
+	margin-top: 10px;
+	margin-left: -287px;
+	padding: 10px;
+	background: #fff;
+	border-radius: 6px;
+	z-index: 10;
+}
+
+.filters-pannel:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 8px 10px 8px;
+	border-color: transparent transparent #ffffff transparent;
+	position: absolute;
+	top: -10px;
+	left: 337px;
+}
+
+.filters-pannel-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: stretch;
+	flex-basis: 200px;
+}
+
+.filter-element {
+	font-size: 12px;
+	min-width: 180px;
+	/* outline: 1px solid grey; */
+}
+
+.filter-element:nth-child(1), .filter-element:nth-child(2), .filter-element:nth-child(3) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2f897a;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 680px){
+	.filters-wrapper {
+		justify-content: space-between;
+	}
+
+	.filters-pannel {
+		width: 420px;
+		width: 100%;
+		margin-left: 0;
+		box-sizing: border-box;
+	}
+	.filters-pannel:before {
+		left: 55px;
+	}
+
+	.filters {
+		width: 100%;
+		position: relative;
+	}
+
+	.filters > *:first-child {
+		float: left;
+	}
+
+	.filters > *:last-child {
+		float: right;
+	}
+	
+	.filter-element {
+		width: 100%;
+	}
+
+	.filter-element:nth-child(4) {
+		padding-bottom: 10px;
+    	border-bottom: 1px solid #2f897a;
+    	margin-bottom: 10px;
+	}
+}
+
+.availability-filter {
+	flex-grow: 1;
+}
+
+.gender-filter {
+	flex-grow: 1;
+}
+
+.category-filter {
+	flex-grow: 1;
+}
+
+
+.rating-filter {
+	flex-grow: 1;
+}
+
+
+.price-filter {
+	flex-grow: 2;
+}
+
+
+.filter-element-label {
+	margin-bottom: 5px;
+}
+
+.availability-switch:after {
+	content: "Available only";
+	position: relative;
+	right: -55px;
+	top: 5px;
+	width: 80px;
+	display: inline-block;
+}
+
+.radio-label:after {
+	position: relative;
+	right: -28px;
+	top: 6px;
+	width: 40px;
+	display: inline-block;
+}
+
+.man-radio {
+	margin-right: 27px;
+}
+
+.man-radio > span:after {
+	content: "Man";
+}
+
+.woman-radio {
+	margin-right: 44px;
+}
+
+.woman-radio > span:after {
+	content: "Woman";
+}
+
+.unisex-radio {
+	margin-right: 30px;
+}
+
+.unisex-radio > span:after {
+	content: "Unisex";
+}

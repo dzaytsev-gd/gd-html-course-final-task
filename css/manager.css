@@ -1,0 +1,26 @@
+.statistics {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+.statistics .statistic-element {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	border: none;
+	flex-basis: 50%;
+}
+
+.statistics .statistic-element img {
+	width: 100%;
+	height: 100%;
+}
+
+@media(max-width: 800px) {
+	.statistics .statistic-element {
+		flex-basis: 100%;
+	}
+}

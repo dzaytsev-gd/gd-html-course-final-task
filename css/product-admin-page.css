@@ -1,0 +1,92 @@
+.product-admin-pannel a {
+	color: #42917a;
+}
+
+.modal.purchased-successfully .modal-container, .modal.delete .modal-container {
+	display: inline-block;
+	width: 250px;
+}
+
+.modal.purchased-successfully .title, .modal.delete .title {
+	text-align: left;
+}
+
+.modal.purchased-successfully .content, .modal.delete .content {
+	overflow: auto;
+	text-align: center;
+	min-height: 80px;
+}
+
+.modal.delete .content br {
+	margin: 0;
+}
+
+.purchased-successfully .bottom-control-menu .btn {
+	display:inline-block;
+	float: right;
+}
+
+.modal.edit .modal-container{
+	width: 500px;
+}
+
+.modal.edit .first-column {
+	float:left;
+	width: calc(50% - 5px);
+}
+
+.modal.edit .second-column {
+	float:right;
+	width: calc(50% - 5px);
+}
+
+@media(max-width: 500px) {
+	.modal.edit .first-column {
+	float:none;
+	width: 100%;
+}
+
+.modal.edit .second-column {
+	float:none;
+	width: 100%;
+}
+}
+.modal.edit form {
+	overflow: hidden;
+}
+
+.modal.edit form label {
+	display: inline-block;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.modal.edit form label label {
+	width: auto;
+	margin-bottom: 0px;
+}
+
+.modal.edit form label:last-child {
+	margin-bottom: 0px;
+}
+
+.modal.edit form label input {
+	width: 100%;
+}
+
+.modal.edit form label select {
+	background: #fff;
+	border: none;
+	color: #444;
+	height: 35px;
+}
+
+.modal.edit form label .icon-select > select + i {
+	color: #2f897a;
+}
+
+.modal.edit .image-preview img {
+	width: 100%;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+}

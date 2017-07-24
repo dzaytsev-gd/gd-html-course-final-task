@@ -1,0 +1,271 @@
+input + i {
+    position: absolute;
+    color: #d6d6d6;
+    top: 8px;
+    right: 10px;
+}
+
+.icon-input {
+	position: relative;
+	display: inline-block;
+}
+
+.icon-input input {
+	padding-right: 30px;
+}
+
+input {
+	transition: box-shadow linear .1s;
+	height: 35px;
+	border-radius: 7px;
+	border: none;
+	padding-left: 13px;
+	padding-right: 5px;
+	box-sizing: border-box;
+	outline: none;
+	font-size: 15px;
+	color: #333333;
+}
+
+input + i {
+	transition: color linear .1s;
+}
+
+input:focus, textarea:focus {
+	box-shadow: inset 0 0px 0px 2px rgb(175, 204, 198);
+}
+
+input:invalid:not(:placeholder-shown), textarea:invalid:not(:placeholder-shown) {
+	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+input:invalid:focus:not(:placeholder-shown), textarea:invalid:focus:not(:placeholder-shown) {
+	box-shadow: inset 0 0px 0px 2px rgb(228, 89, 89);
+}
+
+input:focus ~ i, textarea:focus ~ i {
+	color: rgb(175, 204, 198);
+}
+
+input:invalid:not(:placeholder-shown) + i, textarea:invalid:not(:placeholder-shown) + i {
+	color: rgb(228, 89, 89);
+}
+
+input:invalid:focus:not(:placeholder-shown) + i, textarea:invalid:focus:not(:placeholder-shown) + i {
+	color: rgb(228, 89, 89);
+}
+
+.btn {
+	display: inline-block;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: bold;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	opacity: 0.95;
+	padding: 0 20px;
+	user-select: none;
+	min-width: 50px;
+	text-align: center;
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+.btn:disabled {
+	opacity: 0.5;
+}
+
+.toggle-btn {
+	display: inline-block;
+	background: none;
+	border: none;
+	outline: none;
+	vertical-align: top;
+}
+
+.toggle-btn > label {
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 4px;
+	color: #fff;
+	opacity: 0.95;
+	user-select: none;
+}
+
+.toggle-btn > label:hover {
+	opacity: 1;
+}
+
+.toggle-btn > input[type="checkbox"] {
+	display: none;
+}
+
+.toggle-pannel {
+	display: none;
+}
+
+.toggle-btn > input[type="checkbox"]:checked ~ .toggle-pannel {
+	display: block;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 25px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(47, 137, 122);
+	border: 1px solid rgb(47, 137, 122);
+	-webkit-transition: .1s;
+	transition: .1s;
+	color: rgb(47, 137, 122);
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 21px;
+	left: 1px;
+	bottom: 1px;
+	background-color: white;
+	-webkit-transition: .1s;
+	transition: .1s;
+}
+
+input:checked + .slider {
+	background-color: #ffffff;
+	color: rgb(0, 0, 45);
+}
+
+input:checked + .slider:before {
+	background-color: rgb(47, 137, 122);
+	-webkit-transform: translateX(25px);
+	-ms-transform: translateX(25px);
+	transform: translateX(25px);
+}
+
+.slider.round {
+  border-radius: 25px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.radio > input[type="radio"] {
+	display: none;
+}
+
+.radio {
+	position: static;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 1px solid rgb(47, 137, 122);
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.radio > input + span {
+	background: #ffffff;
+	width: 23px;
+	height: 23px;
+	margin: 1px;
+	display: inline-block;
+	border-radius: 50%;
+}
+
+.radio > input:checked + span {
+	background: #2f897a;
+}
+
+.radio.labeled-radio > input:checked + span:after {
+	color: #2f897a;
+}
+
+.icon-select {
+	position: relative;
+}
+
+select {
+	-webkit-appearance: none; 
+	-moz-appearance: none;
+	appearance: none;
+	width: 100%;
+	height: 30px;
+	background-color: #2f897a;
+	color: #fff;
+	text-align: center;
+	outline: none;
+	padding-left: 8px;
+	box-sizing: border-box;
+}
+
+.icon-select > select ~ i {
+	position: absolute;
+	color: #fff;
+	top: -4px;
+	right: 9px;
+	display: inline-block;
+}
+
+textarea {
+	width: 100%;
+	border: none;
+	border-radius: 3px;
+	height: 150px;
+	overflow: auto;
+	outline: none;
+	transition: box-shadow linear .1s;
+	padding: 5px 0 0 7px;
+	box-sizing: border-box;
+}
+
+.big {
+	height: 35px;
+	line-height: 35px;
+	padding: 0 20px;
+	font-size: 14px;
+}
+
+.regular {
+	height: 30px;
+	font-weight: 100;
+	font-size: 12px;
+	line-height: 30px;
+	padding: 0 20px;
+}
+
+.primary {
+	background: linear-gradient(to top, #398b73, #64ccbd);
+}
+
+.primary:active, .toggle-btn > input:checked + label {
+	background: linear-gradient(to top, #64ccbd, #398b73);
+}
+
+.secondary {
+	background: linear-gradient(to top, rgb(125, 125, 125), rgb(180, 180, 180));
+}
+
+.secondary:active {
+	background: linear-gradient(to top, rgb(180, 180, 180), rgb(125, 125, 125));
+}
