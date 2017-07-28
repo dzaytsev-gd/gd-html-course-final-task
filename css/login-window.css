@@ -12,10 +12,6 @@
 	margin-bottom: 20px;
 }
 
-.login-window form label:last-child {
-	margin-bottom: 0;
-}
-
 .login-window input, .login-window .icon-input {
 	width: 100%;
 }
