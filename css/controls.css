@@ -87,28 +87,26 @@ input:invalid:focus:not(:placeholder-shown) + i, textarea:invalid:focus:not(:pla
 	vertical-align: top;
 }
 
-.toggle-btn > label {
+.toggle-btn > button {
 	cursor: pointer;
 	display: inline-block;
 	border-radius: 4px;
 	color: #fff;
 	opacity: 0.95;
 	user-select: none;
+    outline: none;
+    border: none;
 }
 
-.toggle-btn > label:hover {
+.toggle-btn > button:hover {
 	opacity: 1;
-}
-
-.toggle-btn > input[type="checkbox"] {
-	display: none;
 }
 
 .toggle-pannel {
 	display: none;
 }
 
-.toggle-btn > input[type="checkbox"]:checked ~ .toggle-pannel {
+.toggle-pannel.active {
 	display: block;
 }
 
@@ -258,7 +256,7 @@ textarea {
 	background: linear-gradient(to top, #398b73, #64ccbd);
 }
 
-.primary:active, .toggle-btn > input:checked + label {
+.primary:active, .toggle-btn > button.active {
 	background: linear-gradient(to top, #64ccbd, #398b73);
 }
 
