@@ -3,16 +3,16 @@
 	font-size: 13px;
 }
 
-.filters-wrapper {
-	width: 100%;
-	display: flex;
-	padding: 0 10px;
-	box-sizing: border-box;
-	justify-content: flex-end;
-	margin-bottom: 10px;
+.filters {
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    display: inline-block;
 }
 
-.filters-wrapper::after {
+.filters::after {
 	content: "";
 	clear: both;
 }
@@ -28,6 +28,7 @@
 	background: #fff;
 	border-radius: 6px;
 	z-index: 10;
+    text-align: left;
 }
 
 .filters-pannel:before {
@@ -65,13 +66,8 @@
 }
 
 @media(max-width: 680px){
-	.filters-wrapper {
-		justify-content: space-between;
-	}
-
 	.filters-pannel {
-		width: 420px;
-		width: 100%;
+		width: calc(100% - 20px);
 		margin-left: 0;
 		box-sizing: border-box;
 	}
