@@ -1,14 +1,14 @@
 $(function() {
 	var toggleSuccessPurchasedWindow = function() {
-		$('.modal.purchased-successfully').toggleClass('active');
+		toggleModal('.modal.purchased-successfully');
 	}
 
 	var toggleEditWindow = function() {
-		$('.modal.edit').toggleClass('active');
+		toggleModal('.modal.edit');
 	}
 
 	var toggleDeleteWindow = function() {
-		$('.modal.delete').toggleClass('active');
+		toggleModal('.modal.delete');
 	}
 
 	var toggleFiltersPannel = function() {
